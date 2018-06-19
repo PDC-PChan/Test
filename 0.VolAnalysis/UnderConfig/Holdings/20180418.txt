@@ -1,0 +1,7 @@
+VIX,5
+EL,3
+TDG,5
+RTN,1
+BA,2
+T,1
+MCD,2

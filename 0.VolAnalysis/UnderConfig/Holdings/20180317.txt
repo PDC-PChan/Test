@@ -1,0 +1,9 @@
+VIX,5
+NKE,5
+IBM,3
+ADBE,3
+MRK,5
+TDG,5
+NVDA,3
+BA,0
+T,2

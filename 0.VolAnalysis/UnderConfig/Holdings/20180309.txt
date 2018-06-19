@@ -1,0 +1,5 @@
+VIX,5
+NKE,5
+T,6
+TDG,4
+NVDA,3

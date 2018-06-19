@@ -1,0 +1,8 @@
+VIX,5
+V,4
+AMZN,1
+T,2
+TDG,5
+XOM,1
+MRK,3
+BA,2

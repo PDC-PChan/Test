@@ -1,0 +1,7 @@
+PM,2
+RHT,10
+TDG,1
+TXN,2
+ACN,1
+UNP,2
+V,2

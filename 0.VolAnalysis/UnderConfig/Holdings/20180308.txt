@@ -1,0 +1,8 @@
+VIX,5
+NKE,4
+QCOM,1
+T,6
+TDG,4
+TIF,2
+BA,6
+ADBE,2

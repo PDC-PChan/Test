@@ -1,0 +1,5 @@
+TDG,2
+VIX,5
+NKE,3
+QCOM,1
+BA,3

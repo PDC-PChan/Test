@@ -1,0 +1,9 @@
+VIX,5
+RTN,3
+T,3
+MRK,4
+TDG,5
+V,3
+BA,3
+ADBE,3
+IBM,2

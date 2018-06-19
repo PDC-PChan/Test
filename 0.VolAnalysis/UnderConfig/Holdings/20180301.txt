@@ -1,0 +1,8 @@
+ITW,3
+NKE,3
+QCOM,1
+VIX,5
+BA,5
+JNJ,3
+TDG,2
+T,1

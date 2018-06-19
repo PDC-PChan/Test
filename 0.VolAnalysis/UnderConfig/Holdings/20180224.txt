@@ -1,0 +1,4 @@
+QCOM,1
+NKE,2
+BA,3
+IBM,6

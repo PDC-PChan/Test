@@ -1,0 +1,8 @@
+NKE,4
+VIX,5
+ADBE,5
+TDG,5
+NVDA,3
+BA,2
+T,2
+MRK,3
