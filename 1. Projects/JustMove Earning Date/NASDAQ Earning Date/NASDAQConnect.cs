@@ -22,7 +22,7 @@ namespace NASDAQ_Earning_Date
 
         public NASDAQConnect()
         {
-            driver = new ChromeDriver(@"C:\Users\Samuel\Documents\Visual Studio 2017");
+            driver = new ChromeDriver(NControl.mainDirectory + "0.VolAnalysis");
         }
 
         ~NASDAQConnect()

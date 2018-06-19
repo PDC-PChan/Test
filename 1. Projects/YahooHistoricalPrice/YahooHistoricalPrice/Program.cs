@@ -22,7 +22,7 @@ namespace YahooHistoricalPrice
 
         static void NeedToMakeThisForSomeReason(int split = 1, int ProcessCode = 0)
         {
-            string MainDirectory = @"C:\Users\Samuel\Documents\dfkjdf\";
+            string MainDirectory = (Environment.UserName.ToUpper() == "CHAN" ? @"C:\Users\chan\Documents\dfkjdf\" : @"C:\Users\Samuel\Documents\dfkjdf\");
             string symbolListAdd = MainDirectory + @"0.VolAnalysis\SymbolList.txt";
             List<string> symbolList = new List<string>();
             bool SomeWrong = false;
