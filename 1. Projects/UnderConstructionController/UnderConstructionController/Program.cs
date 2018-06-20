@@ -12,11 +12,13 @@ namespace UnderConstructionController
     {
         static void Main(string[] args)
         {
+            string MasterDirectory = Environment.UserName.ToUpper() == "CHAN" ? @"C:\Users\chan\Documents\dfkjdf\" : @"C:\Users\Samuel\Documents\dfkjdf\";
+
             // Start TWS Live
             Console.WriteLine("{0}: Starting TWS ...", DateTime.Now.ToShortTimeString());
             Process IBGProcess = new System.Diagnostics.Process();
             IBGProcess.StartInfo.FileName = "IBControllerStart - live.bat";
-            IBGProcess.StartInfo.WorkingDirectory = @"C:\Users\Samuel\Documents\IBController";
+            IBGProcess.StartInfo.WorkingDirectory = MasterDirectory.Replace("dfkjdf\\",  "IBController");
             IBGProcess.Start();
             Thread.Sleep(1 * 60 * 1000);
 
@@ -27,7 +29,7 @@ namespace UnderConstructionController
             Process UnderConstructor = new System.Diagnostics.Process();
             Console.WriteLine("{0}: Starting Under Constructor ...", DateTime.Now.ToShortTimeString());
             UnderConstructor.StartInfo.FileName = "UnderConstruction.exe";
-            UnderConstructor.StartInfo.WorkingDirectory = @"C:\Users\Samuel\source\repos\UnderConstruction\UnderConstruction\bin\Debug";
+            UnderConstructor.StartInfo.WorkingDirectory = MasterDirectory + @"1. Projects\UnderConstruction\UnderConstruction\bin\Debug";
             UnderConstructor.Start();
         }
     }
