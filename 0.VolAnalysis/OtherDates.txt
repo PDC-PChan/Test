@@ -47,5 +47,4 @@ FOMC,3/14/2017,
 FOMC,5/2/2017,
 FOMC,6/13/2017,
 FOMC,7/25/2017,
-Xtreme,8/20/2015,China Melt Down
-Xtreme,6/23/2016,Brexit
+Xtreme,7/20/2015,PlaceHolder

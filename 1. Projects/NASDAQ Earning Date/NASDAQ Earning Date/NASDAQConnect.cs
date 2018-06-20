@@ -22,7 +22,7 @@ namespace NASDAQ_Earning_Date
 
         public NASDAQConnect()
         {
-            driver = new ChromeDriver(@"C:\Users\Samuel\Documents\Visual Studio 2017");
+            driver = new ChromeDriver(NControl.mainDirectory + "0.VolAnalysis");
         }
 
         public DateTime GetNextEarningDate(string symbol)
@@ -92,7 +92,16 @@ namespace NASDAQ_Earning_Date
                 }
 
                 rawText = rawText.Substring(DateStartAnchor, DateEndAnchor - DateStartAnchor);
-                resultDate = DateTime.ParseExact(rawText, (shortMonthFlag) ? "MMM. d, yyyy" : "MMMM d, yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                try
+                {
+                    resultDate = DateTime.ParseExact(rawText, (shortMonthFlag) ? "MMM. d, yyyy" : "MMMM d, yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                }
+                catch (System.FormatException)
+                {
+                    rawText = rawText.Replace("Sept", "Sep");
+                    shortMonthFlag = true;
+                    resultDate = DateTime.ParseExact(rawText, (shortMonthFlag) ? "MMM. d, yyyy" : "MMMM d, yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                }
             }
 
             return (resultDate);

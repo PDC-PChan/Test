@@ -8,9 +8,10 @@ namespace NASDAQ_Earning_Date
 {
     class NControl
     {
+        public static string mainDirectory = (Environment.UserName.ToUpper() == "CHAN" ? @"C:\Users\chan\Documents\dfkjdf\" : @"C:\Users\Samuel\Documents\dfkjdf\");
         public static string symbolListAdd = mainDirectory + @"0.VolAnalysis\SymbolList.txt";
         public static string symbolOutputAdd = mainDirectory +  @"0.VolAnalysis\EarningsNASDAQ.txt";
-        public static string mainDirectory = (Environment.UserName.ToUpper() == "CHAN" ? @"C:\Users\chan\Documents\dfkjdf\" : @"C:\Users\Samuel\Documents\dfkjdf\");
+        
 
         public static int separateDay = 40;
 

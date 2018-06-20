@@ -97,7 +97,16 @@ namespace NASDAQ_Earning_Date
                 }
 
                 rawText = rawText.Substring(DateStartAnchor, DateEndAnchor - DateStartAnchor);
-                resultDate = DateTime.ParseExact(rawText, (shortMonthFlag) ? "MMM. d, yyyy" : "MMMM d, yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                try
+                {
+                    resultDate = DateTime.ParseExact(rawText, (shortMonthFlag) ? "MMM. d, yyyy" : "MMMM d, yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                }
+                catch (System.FormatException)
+                {
+                    rawText = rawText.Replace("Sept", "Sep");
+                    shortMonthFlag = true;
+                    resultDate = DateTime.ParseExact(rawText, (shortMonthFlag) ? "MMM. d, yyyy" : "MMMM d, yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                }
             }
 
             return (resultDate);
@@ -186,6 +195,7 @@ namespace NASDAQ_Earning_Date
                 CookieContainer = new CookieContainer()
             };
             HttpClient client = new HttpClient(handler);
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
 
             using (HttpResponseMessage response = client.GetAsync(urlAddress).Result)
             {
