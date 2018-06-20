@@ -12,7 +12,7 @@ namespace MultiYahoo
     {
         static void Main(string[] args)
         {
-            int split = 10;
+            int split = 5;
             for (int i = 0; i < split; i++)
             {
                 Thread.Sleep(1000);
