@@ -22,7 +22,9 @@ namespace NASDAQ_Earning_Date
 
         public NASDAQConnect()
         {
-            driver = new ChromeDriver(NControl.mainDirectory + "0.VolAnalysis");
+            ChromeOptions options = new ChromeOptions();
+            options.AddArgument("--log-level=3");
+            driver = new ChromeDriver(NControl.mainDirectory + "0.VolAnalysis",options);
         }
 
         public DateTime GetNextEarningDate(string symbol)

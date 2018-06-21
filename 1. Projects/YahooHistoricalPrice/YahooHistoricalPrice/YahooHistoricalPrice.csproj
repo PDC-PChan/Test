@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\YahooFinanceAPI-develop\YahooFinanceAPI\YahooFinanceAPI.csproj">
+      <Project>{9f664c6a-6d24-45ef-9a9c-3324292e1c46}</Project>
+      <Name>YahooFinanceAPI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
