@@ -52,7 +52,7 @@ namespace YahooHistoricalPrice
             {
                 DownloadPageAsync(symbol, new DateTime(2010, 1, 1), DateTime.Today, MainDirectory + symbol + @"\Prices.csv");
                 Console.WriteLine("{0} of {1} Done - {2}", ++cnt, symbolList.Count, symbol);
-                Thread.Sleep(10000);
+                Thread.Sleep(5000);
             }
 
 
@@ -65,17 +65,33 @@ namespace YahooHistoricalPrice
                 {
                     try
                     {
-                        StreamReader sr = new StreamReader(MainDirectory + symbol + @"\Prices.csv");
-                        if (sr.ReadToEnd().IndexOf("{") != -1)
+                        string fileAdd = MainDirectory + symbol + @"\Prices.csv";
+                        if (!IsFileLocked(new FileInfo(fileAdd)))
                         {
-                            sr.Close();
-                            DownloadPageAsync(symbol, new DateTime(2010, 1, 1), DateTime.Today, MainDirectory + symbol + @"\Prices.csv");
-                            SomeWrong = true;
-                            Thread.Sleep(10000);
+                            StreamReader sr = new StreamReader(fileAdd);
+                            if (sr.ReadToEnd().IndexOf("{") != -1)
+                            {
+                                sr.Close();
+                                Console.WriteLine("Rerunning {0} ...", symbol);
+                                if (!IsFileLocked(new FileInfo(fileAdd)))
+                                {
+                                    DownloadPageAsync(symbol, new DateTime(2010, 1, 1), DateTime.Today, MainDirectory + symbol + @"\Prices.csv");
+                                    SomeWrong = true;
+                                    Thread.Sleep(5000);
+                                }
+                                else
+                                {
+                                    Console.WriteLine("File locked...");
+                                }
+                            }
+                            else
+                            {
+                                sr.Close();
+                            }
                         }
                         else
                         {
-                            sr.Close();
+                            SomeWrong = true;
                         }
                     }
                     catch (Exception)
@@ -143,6 +159,32 @@ namespace YahooHistoricalPrice
                 }
 
             }
+        }
+
+        public static bool IsFileLocked(FileInfo file)
+        {
+            FileStream stream = null;
+
+            try
+            {
+                stream = file.Open(FileMode.Open, FileAccess.Write, FileShare.None);
+            }
+            catch (IOException)
+            {
+                //the file is unavailable because it is:
+                //still being written to
+                //or being processed by another thread
+                //or does not exist (has already been processed)
+                return true;
+            }
+            finally
+            {
+                if (stream != null)
+                    stream.Close();
+            }
+
+            //file is not locked
+            return false;
         }
     }
 }
