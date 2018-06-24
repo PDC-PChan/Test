@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestYahooAPI", "TestYahooAPI\TestYahooAPI.csproj", "{939FDBD1-3E42-4DA3-8CA9-829E59DF89D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YahooFinanceAPI", "..\YahooFinanceAPI-develop\YahooFinanceAPI\YahooFinanceAPI.csproj", "{9F664C6A-6D24-45EF-9A9C-3324292E1C46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{939FDBD1-3E42-4DA3-8CA9-829E59DF89D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{939FDBD1-3E42-4DA3-8CA9-829E59DF89D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{939FDBD1-3E42-4DA3-8CA9-829E59DF89D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{939FDBD1-3E42-4DA3-8CA9-829E59DF89D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F664C6A-6D24-45EF-9A9C-3324292E1C46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F664C6A-6D24-45EF-9A9C-3324292E1C46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F664C6A-6D24-45EF-9A9C-3324292E1C46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F664C6A-6D24-45EF-9A9C-3324292E1C46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA384A64-502A-450E-BD0C-8B3E323FD433}
+	EndGlobalSection
+EndGlobal

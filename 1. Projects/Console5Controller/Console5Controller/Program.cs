@@ -20,7 +20,7 @@ namespace Console5Controller
             Console.WriteLine("{0}: Starting IBGateway ...", DateTime.Now.ToShortTimeString());
             Process IBGProcess = new System.Diagnostics.Process();
             IBGProcess.StartInfo.FileName = "IBControllerGatewayStart.bat";
-            IBGProcess.StartInfo.WorkingDirectory = MainDirectory.Replace("dfkjdf\\", "IBController");
+            IBGProcess.StartInfo.WorkingDirectory = @"C:\IBController";
             IBGProcess.Start();
             Thread.Sleep(1 * 60 * 1000);
 
@@ -31,7 +31,7 @@ namespace Console5Controller
             {
                 Console.WriteLine("{0}: Starting Console 5 Alarm - Trial {1}", DateTime.Now.ToShortTimeString(),  i + 1);
                 Console5.StartInfo.FileName = "ConsoleApplication5.exe";
-                Console5.StartInfo.WorkingDirectory = MainDirectory + @"ConsoleApplication5 v2\ConsoleApplication5\bin\Debug";
+                Console5.StartInfo.WorkingDirectory = MainDirectory + @"1. Projects\ConsoleApplication5 v2\ConsoleApplication5\bin\Debug";
                 Console5.Start();
                 Thread.Sleep(wakeupDuration * 60* 1000);
                 Console5.Kill();
@@ -40,7 +40,7 @@ namespace Console5Controller
             // Start Console 5
             Console.WriteLine("{0}: Starting Console 5 ...", DateTime.Now.ToShortTimeString());
             Console5.StartInfo.FileName = "ConsoleApplication5.exe";
-            Console5.StartInfo.WorkingDirectory = MainDirectory + @"ConsoleApplication5 v2\ConsoleApplication5\bin\Debug";
+            Console5.StartInfo.WorkingDirectory = MainDirectory + @"1. Projects\ConsoleApplication5 v2\ConsoleApplication5\bin\Debug";
             Console5.Start();
 
         }
