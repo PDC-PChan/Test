@@ -32,6 +32,7 @@ namespace ConsoleApplication5
                                                 "DIS",
                                                 "EBAY",
                                                 "EL",
+                                                "EA",
                                                 "F",
                                                 "GD",
                                                 "GLW",

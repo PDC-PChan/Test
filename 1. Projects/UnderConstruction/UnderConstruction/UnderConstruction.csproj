@@ -99,5 +99,15 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ConsoleApplication4\ConsoleApplication4\ConsoleApplication4.csproj">
+      <Project>{b61a8884-3ea7-4072-8aac-9237cd1d0a6a}</Project>
+      <Name>ConsoleApplication4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TWS API\source\CSharpClient\client\CSharpAPI.csproj">
+      <Project>{8ede0744-96c2-40b0-a8dc-37df79370203}</Project>
+      <Name>CSharpAPI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

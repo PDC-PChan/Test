@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication5
 {
-    public class Control
+    public static class Control
     {
         public static int connectionPort = 4002;
         public static DateTime simulationEndDate = DateTime.Today.AddMonths(4);
-        public static int maxNumThreads = 8;
+        public static int maxNumThreads = 4;
         public static string MainDirectory = (Environment.UserName.ToUpper() == "CHAN" ? @"C:\Users\chan\Documents\" : @"C:\Users\Samuel\Documents\");
         public static string ResultOutputFolder = MainDirectory + @"dfkjdf\";
-        public static string ErrorLogAddress = MainDirectory + @"Visual Studio 2013\Projects\ConsoleApplication5 v2\Error Log\";
+        public static string ErrorLogAddress = ResultOutputFolder + @"1. Projects\ConsoleApplication5 v2\Error Log\";
         public static string UnderContructionConfig = ResultOutputFolder + @"0.VolAnalysis\UnderConfig\Config.txt";
     }
 
-    public class RCodeControl
+    public static class RCodeControl
     {
-        public static string RequireFilesAddress = Control.MainDirectory +  @"Visual Studio 2013\Projects\ConsoleApplication5\R Codes\R_RequireFiles.R".Replace("\\","/");
+        public static string RequireFilesAddress = (Control.ResultOutputFolder + @"1. Projects\ConsoleApplication5 v2\R Codes\R_RequireFiles.R").Replace("\\","/");
         public static string DataFilesAddress = Control.ResultOutputFolder.Replace("\\", "/");
-        public static string SimulationAddress = Control.ResultOutputFolder + @"0.VolAnalysis\gfs\gf - Copy.R".Replace("\\", "/");
+        public static string SimulationAddress = (Control.ResultOutputFolder + @"0.VolAnalysis\gfs\gf - Copy.R").Replace("\\", "/");
     }
 
     public class DataMgrCon
