@@ -1,5 +1,8 @@
 Type,Date,Remarks
 FOMC,1/30/2018,
+FOMC,3/20/2018,
+FOMC,5/1/2018,
+FOMC,6/12/2018,
 FOMC,9/19/2017,
 FOMC,10/31/2017,
 FOMC,12/12/2017,
@@ -40,8 +43,7 @@ FOMC,3/14/2017,
 FOMC,5/2/2017,
 FOMC,6/13/2017,
 FOMC,7/25/2017,
-Xtreme,8/20/2015,China Melt Down
-Xtreme,6/23/2016,Brexit
+Xtreme,7/22/2015,PlaceHolder
 Earnings,3/25/2010
 Earnings,6/24/2010
 Earnings,9/16/2010
@@ -65,13 +67,13 @@ Earnings,12/17/2014
 Earnings,3/17/2015
 Earnings,6/17/2015
 Earnings,9/16/2015
+Earnings,12/16/2015
 Earnings,3/15/2016
 Earnings,6/16/2016
+Earnings,9/15/2016
 Earnings,12/15/2016
 Earnings,3/15/2017
+Earnings,6/21/2017
 Earnings,9/14/2017
-Earnings,12/14/2017
 Earnings,3/19/2018
-Earnings,3/19/2018
-Earnings,3/19/2018
-Earnings,3/19/2018
+Earnings,6/19/2018

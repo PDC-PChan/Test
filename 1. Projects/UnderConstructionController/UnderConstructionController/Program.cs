@@ -18,7 +18,7 @@ namespace UnderConstructionController
             Console.WriteLine("{0}: Starting TWS ...", DateTime.Now.ToShortTimeString());
             Process IBGProcess = new System.Diagnostics.Process();
             IBGProcess.StartInfo.FileName = "IBControllerStart - live.bat";
-            IBGProcess.StartInfo.WorkingDirectory = MasterDirectory.Replace("dfkjdf\\",  "IBController");
+            IBGProcess.StartInfo.WorkingDirectory = @"C:\IBController";
             IBGProcess.Start();
             Thread.Sleep(1 * 60 * 1000);
 
